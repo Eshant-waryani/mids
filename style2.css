@@ -1,0 +1,67 @@
+body{
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.parent{
+    height: 300px;
+    width: 600px;
+    background-color: crimson;
+    display: flex;
+    border-radius: 10px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+.left{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    border-right: 1px solid black;
+    flex-direction: column;
+}
+.right{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+i{
+    margin-bottom: 80px;
+    margin-left: 260px;
+}
+p{
+    margin-bottom: 60px;
+    margin-right: 260px;
+}
+img{
+    border-radius: 50%;
+}
+input{
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 20px;
+}
+button{
+    border-radius: 4px;
+    border: none;
+    height: 20px;
+    width: 80px;
+    background-color: gray;
+    color: white;
+    transition: all 1s ease;
+}
+button:hover{
+    background-color: black;
+    color: white;
+}
+#close{
+    display: none;
+}
+body:has(#close:checked) .parent{
+    display: none;
+}
+body:has(#close:checked) #close{
+    display: block;
+}
